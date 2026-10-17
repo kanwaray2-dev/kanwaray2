@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ยูเลิฟไอมั้ยย 💗</title>
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #ffe4ef;
+  font-family: sans-serif;
+}
+.card {
+  background: white;
+  border: 3px solid #ed75a9;
+  border-radius: 22px;
+  padding: 25px 18px;
+  width: 82%;
+  max-width: 340px;
+  text-align: center;
+  box-sizing: border-box;
+}
+h1 { font-size: 27px; }
+img {
+  width: 100%;
+  border-radius: 12px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 17px;
+  font-size: 17px;
+  color: white;
+}
+#yes { background: #ff3265; }
+#no { background: #aaa; }
+#message {
+  color: #ed4c88;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>รักเค้าไหม? 💖</h1>
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjEx/cute%20cat/giphy.gif"
+       alt="รูปน่ารัก"
+       onerror="this.style.display='none'">
+  <p>ตอบตามความจริงน้าา 🥺</p>
+  <div class="buttons">
+    <button id="yes" onclick="love()">รักก 💗</button>
+    <button id="no" onclick="runAway()">ไม่รักก 😾</button>
+  </div>
+  <div id="message"></div>
+</div>
+<script>
+function love() {
+  document.getElementById("message").innerHTML =
+    "ไอก้รักยูน้าา จุ้บ ๆ 🩷";
+}
+function runAway() {
+  const b = document.getElementById("no");
+  b.style.position = "fixed";
+  b.style.left = Math.random() * 65 + 10 + "%";
+  b.style.top = Math.random() * 70 + 10 + "%";
+}
+</script>
+</body>
+</html>
